@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Events } from 'ionic-angular';
 
 /**
  * Generated class for the Sn1Sec2Component component.
@@ -14,9 +15,12 @@ export class Sn1Sec2Component {
 
   text: string;
 
-  constructor() {
+  constructor(private events:Events) {
     console.log('Hello Sn1Sec2Component Component');
     this.text = 'Hello World';
   }
+  submit(){
+    this.events.publish("sec2Submitted");
 
+  }
 }

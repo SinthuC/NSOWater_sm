@@ -1,42 +1,49 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>
+    <ion-title style="text-align:center">
       แบบบันทึกการนับจด สน.1
     </ion-title>
   </ion-navbar>
   <ion-toolbar no-border-top>
-      <ion-segment [(ngModel)]="sn1">
-        <ion-segment-button value="page1">
-          หน้าที่ 1
-        </ion-segment-button>
-        <ion-segment-button value="page2">
-          หน้าที่ 2
-        </ion-segment-button>
-        <ion-segment-button value="page3">
-          หน้าที่ 3 
-        </ion-segment-button>
-      </ion-segment>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-    <div style="justify-content:center;justify-items: center"[ngSwitch]="sn1">
+    <ion-segment [(ngModel)]="sn1">
+      <ion-segment-button value="page1">
+        หน้าที่ 1
+      </ion-segment-button>
+      <ion-segment-button value="page2" [disabled]="!isSec2Enable">
+        หน้าที่ 2
+      </ion-segment-button>
+      <ion-segment-button value="page3" [disabled]="!isSec3Enable">
+        หน้าที่ 3
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-grid >
+    <ion-row justify-content-center >
+      <ion-col col-10 style="background-color:red;text-align:center" >This column will take 12 columns</ion-col>
+    </ion-row>
+    </ion-grid>
+    <div style="justify-content:center;justify-items: center" [ngSwitch]="sn1">
       <ion-list *ngSwitchCase="'page1'">
-       <sn1-sec1></sn1-sec1>
+        <sn1-sec1></sn1-sec1>
       </ion-list>
-  
+
       <ion-list *ngSwitchCase="'page2'">
-      <sn1-sec2></sn1-sec2>
+        <sn1-sec2></sn1-sec2>
       </ion-list>
-  
+
       <ion-list *ngSwitchCase="'page3'">
-     <sn1-sec3></sn1-sec3>
+        <sn1-sec3></sn1-sec3>
       </ion-list>
     </div>
-  </ion-content>
+</ion-content>
 
-  <!--ion-toolbar no-border-top>
+<!--ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="sn1">
       <ion-segment-button value="page1">
         Puppies
@@ -64,6 +71,5 @@
 </ion-header-->
 
 <!--ion-content padding>
-  <button ion-button (click)="load()"></button>
+  
 </ion-content-->
-

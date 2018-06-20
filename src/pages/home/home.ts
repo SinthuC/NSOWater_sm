@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Events} from 'ionic-angular';
 import { ShowPage } from '../show/show';
 import { Platform } from 'ionic-angular';
 
@@ -17,21 +17,29 @@ export class HomePage {
   year: number;
   sn1: string = "page1";
   isAndroid: boolean = false;
+  isSec1Enable:boolean
+  isSec2Enable:boolean
+  isSec3Enable:boolean
 
   musicAlertOpts: { title: string, subTitle: string };
 
-  constructor(public navCtrl: NavController) {
-    this.musicAlertOpts = {
-      title: '1994 Music',
-      subTitle: 'Select your favorite'
-      
-    };
+  constructor(public navCtrl: NavController, private events:Events) {
+    this.isSec1Enable =  true
+    this.isSec2Enable =  false
+    this.isSec3Enable =  false
+    this.events.subscribe("sec1Submitted",() => {
+        this.sn1="page2"
+        this.isSec2Enable = true;
+    })
+
+    this.events.subscribe("sec2Submitted",() => {
+      this.sn1="page3"
+      this.isSec3Enable = true;
+  })
   }
   
   load(){
-    this.navCtrl.push (ShowPage, {
-      val: 'anishnirmal'
-    })
+    this.sn1 = "page2";
   }
   stpSelect() {
     console.log('STP selected');
