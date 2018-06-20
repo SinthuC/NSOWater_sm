@@ -84,7 +84,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"E:\ionic_water\water\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>\n      แบบบันทึกการนับจด สน.1\n    </ion-title>\n  </ion-navbar>\n  <ion-toolbar no-border-top>\n      <ion-segment [(ngModel)]="sn1">\n        <ion-segment-button value="page1">\n          หน้าที่ 1\n        </ion-segment-button>\n        <ion-segment-button value="page2">\n          หน้าที่ 2\n        </ion-segment-button>\n        <ion-segment-button value="page3">\n          หน้าที่ 3 \n        </ion-segment-button>\n      </ion-segment>\n    </ion-toolbar>\n  </ion-header>\n  \n  <ion-content>\n    <div [ngSwitch]="sn1">\n      <ion-list *ngSwitchCase="\'page1\'">\n        <ion-item>\n          <h2>ชื่อถนน ลำน้ำหรือละแวกบ้าน</h2>\n        </ion-item>\n        <ion-item>\n            <input>\n        </ion-item>\n        <ion-item>\n          <h2>ชื่อตรอก/ซอย</h2>\n        </ion-item>\n        <ion-item>\n            <input>\n        </ion-item>\n        <ion-item>\n          <h2>ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน ฯลฯ</h2>\n        </ion-item>\n        <ion-item>\n            <input>\n        </ion-item>\n        <ion-item>\n          <h2>เลขที่บ้าน/อาคาร</h2>\n        </ion-item>\n        <ion-item>\n            <input>\n        </ion-item>\n        <ion-item>\n            <ion-label>ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง </ion-label>\n            <ion-select [(ngModel)]="os" submitText="OK" cancelText="cancel">\n              <ion-option value="dos">DOS</ion-option>\n              <ion-option value="lunix">Linux</ion-option>\n              <ion-option value="mac7">Mac OS 7</ion-option>\n              <ion-option value="mac8">Mac OS 8</ion-option>\n              <ion-option value="win3.1">Windows 3.1</ion-option>\n              <ion-option value="win95">Windows 95</ion-option>\n              <ion-option value="win98">Windows 98</ion-option>\n            </ion-select>\n          </ion-item>\n          <ion-item>\n            <ion-label>การเข้าพบ /3</ion-label>\n            <ion-select [(ngModel)]="os" submitText="OK" cancelText="cancel">\n              <ion-option value="dos">DOS</ion-option>\n              <ion-option value="lunix">Linux</ion-option>\n              <ion-option value="mac7">Mac OS 7</ion-option>\n              <ion-option value="mac8">Mac OS 8</ion-option>\n              <ion-option value="win3.1">Windows 3.1</ion-option>\n              <ion-option value="win95">Windows 95</ion-option>\n              <ion-option value="win98">Windows 98</ion-option>\n            </ion-select>\n          </ion-item>\n          <ion-item>\n            <h2>ให้ขันทึกข้อความเกี่ยวกับ ปัญหา/อุปสรรค/การนัดหมาย/เหตุผล ที่นับจดไม่ได้</h2>\n          </ion-item>\n          <ion-item>\n              <input>\n          </ion-item>\n      </ion-list>\n  \n      <ion-list *ngSwitchCase="\'page2\'">\n        <ion-item>\n          <h2>จำนวนครัวเรือน/สถานประกอบการรวมทั้งหมด ในบ้าน/อาคาร/สิ่งปลูกสร้าง</h2>\n        </ion-item>\n        <ion-item>\n          <ion-input placeholder="กรอก"></ion-input>\n        </ion-item>\n      </ion-list>\n  \n      <ion-list *ngSwitchCase="\'page3\'">\n        <ion-item>\n          <h2>Ruby</h2>\n        </ion-item>\n        <ion-item>\n          <h2>Oscar</h2>\n        </ion-item>\n        <ion-item>\n          <h2>Zoey</h2>\n        </ion-item>\n        <ion-item>\n          <h2>Otto</h2>\n        </ion-item>\n      </ion-list>\n    </div>\n  </ion-content>\n\n  <!--ion-toolbar no-border-top>\n    <ion-segment [(ngModel)]="sn1">\n      <ion-segment-button value="page1">\n        Puppies\n      </ion-segment-button>\n      <ion-segment-button value="kittens">\n        Kittens\n      </ion-segment-button>\n      <ion-segment-button value="ducklings">\n        Ducklings\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n\n  <ion-content>\n    <div [ngSwitch]="sn1">\n      <ion-list *ngSwitchCase="page1">\n        <ion-item>\n            <ion-thumbnail item-start>\n            </ion-thumbnail>\n             <h2>Ruby</h2>\n        </ion-item>\n      </ion-list>\n    </div>\n  </ion-content>\n</ion-header-->\n\n<!--ion-content padding>\n  <button ion-button (click)="load()"></button>\n</ion-content-->\n\n'/*ion-inline-end:"E:\ionic_water\water\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>\n      แบบบันทึกการนับจด สน.1\n    </ion-title>\n  </ion-navbar>\n  <ion-toolbar no-border-top>\n      <ion-segment [(ngModel)]="sn1">\n        <ion-segment-button value="page1">\n          หน้าที่ 1\n        </ion-segment-button>\n        <ion-segment-button value="page2">\n          หน้าที่ 2\n        </ion-segment-button>\n        <ion-segment-button value="page3">\n          หน้าที่ 3 \n        </ion-segment-button>\n      </ion-segment>\n    </ion-toolbar>\n  </ion-header>\n  \n  <ion-content>\n    <div style="justify-content:center;justify-items: center"[ngSwitch]="sn1">\n      <ion-list *ngSwitchCase="\'page1\'">\n       <sn1-sec1></sn1-sec1>\n      </ion-list>\n  \n      <ion-list *ngSwitchCase="\'page2\'">\n      <sn1-sec2></sn1-sec2>\n      </ion-list>\n  \n      <ion-list *ngSwitchCase="\'page3\'">\n     <sn1-sec3></sn1-sec3>\n      </ion-list>\n    </div>\n  </ion-content>\n\n  <!--ion-toolbar no-border-top>\n    <ion-segment [(ngModel)]="sn1">\n      <ion-segment-button value="page1">\n        Puppies\n      </ion-segment-button>\n      <ion-segment-button value="kittens">\n        Kittens\n      </ion-segment-button>\n      <ion-segment-button value="ducklings">\n        Ducklings\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n\n  <ion-content>\n    <div [ngSwitch]="sn1">\n      <ion-list *ngSwitchCase="page1">\n        <ion-item>\n            <ion-thumbnail item-start>\n            </ion-thumbnail>\n             <h2>Ruby</h2>\n        </ion-item>\n      </ion-list>\n    </div>\n  </ion-content>\n</ion-header-->\n\n<!--ion-content padding>\n  <button ion-button (click)="load()"></button>\n</ion-content-->\n\n'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], HomePage);
@@ -119,9 +119,10 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(269);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_show_show__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_show_show__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -136,29 +137,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_show_show__["a" /* ShowPage */]
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_show_show__["a" /* ShowPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/show/show.module#ShowPageModule', name: 'ShowPage', segment: 'show', priority: 'low', defaultHistory: [] }
                     ]
-                })
+                }),
+                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* ComponentsModule */],
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_show_show__["a" /* ShowPage */]
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_show_show__["a" /* ShowPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -209,7 +212,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"E:\ionic_water\water\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"E:\ionic_water\water\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -217,6 +220,170 @@ var MyApp = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 271:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sn1_sec1_sn1_sec1__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sn1_sec2_sn1_sec2__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sn1_sec3_sn1_sec3__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(39);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var ComponentsModule = /** @class */ (function () {
+    function ComponentsModule() {
+    }
+    ComponentsModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__sn1_sec1_sn1_sec1__["a" /* Sn1Sec1Component */],
+                __WEBPACK_IMPORTED_MODULE_2__sn1_sec2_sn1_sec2__["a" /* Sn1Sec2Component */],
+                __WEBPACK_IMPORTED_MODULE_2__sn1_sec2_sn1_sec2__["a" /* Sn1Sec2Component */],
+                __WEBPACK_IMPORTED_MODULE_3__sn1_sec3_sn1_sec3__["a" /* Sn1Sec3Component */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["c" /* IonicModule */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__sn1_sec1_sn1_sec1__["a" /* Sn1Sec1Component */],
+                __WEBPACK_IMPORTED_MODULE_2__sn1_sec2_sn1_sec2__["a" /* Sn1Sec2Component */],
+                __WEBPACK_IMPORTED_MODULE_2__sn1_sec2_sn1_sec2__["a" /* Sn1Sec2Component */],
+                __WEBPACK_IMPORTED_MODULE_3__sn1_sec3_sn1_sec3__["a" /* Sn1Sec3Component */]]
+        })
+    ], ComponentsModule);
+    return ComponentsModule;
+}());
+
+//# sourceMappingURL=components.module.js.map
+
+/***/ }),
+
+/***/ 272:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Sn1Sec1Component; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the Sn1Sec1Component component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var Sn1Sec1Component = /** @class */ (function () {
+    function Sn1Sec1Component() {
+        console.log('Hello Sn1Sec1Component Component');
+        this.text = 'Hello World';
+    }
+    Sn1Sec1Component = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'sn1-sec1',template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec1/sn1-sec1.html"*/'<ion-item>\n  <h2>ชื่อถนน ลำน้ำหรือละแวกบ้าน</h2>\n</ion-item>\n<ion-item>\n    <input>\n</ion-item>\n<ion-item>\n  <h2>ชื่อตรอก/ซอย</h2>\n</ion-item>\n<ion-item>\n    <input>\n</ion-item>\n<ion-item>\n  <h2>ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน ฯลฯ</h2>\n</ion-item>\n<ion-item>\n    <input>\n</ion-item>\n<ion-item>\n  <h2>เลขที่บ้าน/อาคาร</h2>\n</ion-item>\n<ion-item>\n    <input>\n</ion-item>\n<ion-item>\n    <ion-label>ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง </ion-label>\n    <ion-select [(ngModel)]="os" submitText="OK" cancelText="cancel">\n      <ion-option value="dos">DOS</ion-option>\n      <ion-option value="lunix">Linux</ion-option>\n      <ion-option value="mac7">Mac OS 7</ion-option>\n      <ion-option value="mac8">Mac OS 8</ion-option>\n      <ion-option value="win3.1">Windows 3.1</ion-option>\n      <ion-option value="win95">Windows 95</ion-option>\n      <ion-option value="win98">Windows 98</ion-option>\n    </ion-select>\n  </ion-item>\n  <ion-item>\n    <ion-label>การเข้าพบ /3</ion-label>\n    <ion-select [(ngModel)]="os" submitText="OK" cancelText="cancel">\n      <ion-option value="dos">DOS</ion-option>\n      <ion-option value="lunix">Linux</ion-option>\n      <ion-option value="mac7">Mac OS 7</ion-option>\n      <ion-option value="mac8">Mac OS 8</ion-option>\n      <ion-option value="win3.1">Windows 3.1</ion-option>\n      <ion-option value="win95">Windows 95</ion-option>\n      <ion-option value="win98">Windows 98</ion-option>\n    </ion-select>\n  </ion-item>\n  <ion-item>\n    <h2>ให้ขันทึกข้อความเกี่ยวกับ ปัญหา/อุปสรรค/การนัดหมาย/เหตุผล ที่นับจดไม่ได้</h2>\n  </ion-item>\n  <ion-item>\n      <input>\n  </ion-item>'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec1/sn1-sec1.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], Sn1Sec1Component);
+    return Sn1Sec1Component;
+}());
+
+//# sourceMappingURL=sn1-sec1.js.map
+
+/***/ }),
+
+/***/ 273:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Sn1Sec2Component; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the Sn1Sec2Component component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var Sn1Sec2Component = /** @class */ (function () {
+    function Sn1Sec2Component() {
+        console.log('Hello Sn1Sec2Component Component');
+        this.text = 'Hello World';
+    }
+    Sn1Sec2Component = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'sn1-sec2',template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec2/sn1-sec2.html"*/'<ion-item>\n  <h2>จำนวนครัวเรือน/สถานประกอบการรวมทั้งหมด ในบ้าน/อาคาร/สิ่งปลูกสร้าง</h2>\n</ion-item>\n<ion-item>\n  <ion-input placeholder="กรอก"></ion-input>\n</ion-item>'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec2/sn1-sec2.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], Sn1Sec2Component);
+    return Sn1Sec2Component;
+}());
+
+//# sourceMappingURL=sn1-sec2.js.map
+
+/***/ }),
+
+/***/ 274:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Sn1Sec3Component; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the Sn1Sec3Component component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var Sn1Sec3Component = /** @class */ (function () {
+    function Sn1Sec3Component() {
+        console.log('Hello Sn1Sec3Component Component');
+        this.text = 'Hello World';
+    }
+    Sn1Sec3Component = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'sn1-sec3',template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec3/sn1-sec3.html"*/'<ion-item>\n  <h2>Ruby</h2>\n</ion-item>\n<ion-item>\n  <h2>Oscar</h2>\n</ion-item>\n<ion-item>\n  <h2>Zoey</h2>\n</ion-item>\n<ion-item>\n  <h2>Otto</h2>\n</ion-item>'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec3/sn1-sec3.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], Sn1Sec3Component);
+    return Sn1Sec3Component;
+}());
+
+//# sourceMappingURL=sn1-sec3.js.map
 
 /***/ }),
 
@@ -255,7 +422,7 @@ var ShowPage = /** @class */ (function () {
     };
     ShowPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-show',template:/*ion-inline-start:"E:\ionic_water\water\src\pages\show\show.html"*/'<!--\n  Generated template for the ShowPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>showPage</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"E:\ionic_water\water\src\pages\show\show.html"*/,
+            selector: 'page-show',template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/pages/show/show.html"*/'<!--\n  Generated template for the ShowPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>showPage</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/pages/show/show.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
     ], ShowPage);
