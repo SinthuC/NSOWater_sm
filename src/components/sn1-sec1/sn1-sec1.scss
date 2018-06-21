@@ -5,7 +5,11 @@ sn1-sec1 {
     }
 
     ion-input, ion-select, ion-textarea {
-        background-color: #f2f2f2;
+        background-color: whitesmoke;
         padding: 5px 10px;
+    }
+    .button ,ion-button{
+       font-size: 20px;
+
     }
 }

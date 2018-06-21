@@ -25683,8 +25683,12 @@ sn1-sec1 ion-label, sn1-sec1 .select-text {
 }
 
 sn1-sec1 ion-input, sn1-sec1 ion-select, sn1-sec1 ion-textarea {
-  background-color: #f2f2f2;
+  background-color: whitesmoke;
   padding: 5px 10px;
+}
+
+sn1-sec1 .button, sn1-sec1 ion-button {
+  font-size: 20px;
 }
 
 page-home .segment-button {
