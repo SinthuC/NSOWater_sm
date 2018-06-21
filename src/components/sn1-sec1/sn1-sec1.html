@@ -18,7 +18,7 @@
 </ion-item>
 <p><button ion-button color="dark" round style="font-size: 20px">ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง</button></p>
       <ion-item>         
-          <ion-select [(ngModel)]="eiei" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">
+          <ion-select [(ngModel)]="os1" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">
               <ion-option value='1'>1.บ้านเดี่ยว</ion-option>
               <ion-option value='2'>2.บ้านแฝด/ทาวน์เฮ้าส์</ion-option>
               <ion-option value='3'>3.ห้องแถว/เรือนแถว/ตึกแถว</ion-option>
@@ -40,7 +40,7 @@
 
     <p><button ion-button color="dark" round >กรุณาเลือกผลการเข้าพบ </button></p>
     <ion-item>         
-        <ion-select [(ngModel)]="os" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">
+        <ion-select [(ngModel)]="os2" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">
             <ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>
             <ion-option [value]=2>2.มีผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ</ion-option>
             <ion-option [value]=3>3.ไม่มี/ไม่พบผู้ให้ข้อมูล</ion-option>

@@ -25691,6 +25691,19 @@ sn1-sec1 .button, sn1-sec1 ion-button {
   font-size: 20px;
 }
 
+sn1-sec2 ion-label, sn1-sec2 .select-text {
+  margin-left: 30px;
+}
+
+sn1-sec2 ion-input, sn1-sec2 ion-select, sn1-sec2 ion-textarea {
+  background-color: whitesmoke;
+  padding: 5px 10px;
+}
+
+sn1-sec2 .button, sn1-sec2 ion-button {
+  font-size: 20px;
+}
+
 page-home .segment-button {
   color: #fff !important;
   font-size: 20px !important;
