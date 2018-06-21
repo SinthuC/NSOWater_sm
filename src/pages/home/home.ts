@@ -20,10 +20,12 @@ export class HomePage {
   isSec1Enable:boolean
   isSec2Enable:boolean
   isSec3Enable:boolean
+  stepCondition:boolean
 
   musicAlertOpts: { title: string, subTitle: string };
 
   constructor(public navCtrl: NavController, private events:Events) {
+    this.stepCondition = true;
     this.isSec1Enable =  true
     this.isSec2Enable =  false
     this.isSec3Enable =  false

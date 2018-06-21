@@ -13,10 +13,19 @@ import { Component } from '@angular/core';
 export class Sn1Sec3Component {
 
   text: string;
-
+  stepCondition :boolean
+  isShow: boolean
+  step:number
   constructor() {
     console.log('Hello Sn1Sec3Component Component');
     this.text = 'Hello World';
+    this.stepCondition = true;
+    this.isShow = true;
+    this.step = 1;
+  }
+
+  onFinish(){
+    
   }
 
 }
