@@ -22,28 +22,34 @@
 </ion-item>
 <ion-item>
     <ion-label>ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง </ion-label>
-    <ion-select [(ngModel)]="os" submitText="OK" cancelText="cancel">
-      <ion-option value="dos">DOS</ion-option>
-      <ion-option value="lunix">Linux</ion-option>
-      <ion-option value="mac7">Mac OS 7</ion-option>
-      <ion-option value="mac8">Mac OS 8</ion-option>
-      <ion-option value="win3.1">Windows 3.1</ion-option>
-      <ion-option value="win95">Windows 95</ion-option>
-      <ion-option value="win98">Windows 98</ion-option>
+    <ion-select [(ngModel)]="home" submitText="OK" cancelText="cancel">
+      <ion-option value="1">1.บ้านเดี่ยว</ion-option>
+      <ion-option value="2">2.บ้านแฝด/ทาวน์เฮ้าส์</ion-option>
+      <ion-option value="3">3.ห้องแถว/เรือนแถว/ตึกแถว</ion-option>
+      <ion-option value='4'>4.อาคารสูง(คอนโดฯ/แมนชั่น/แฟลต/อพาร์ทเมนท์)</ion-option>
+      <ion-option value='5'>5.อาคารสำนักงานเอกชน</ion-option>
+      <ion-option value='6'>6.โรงแรม/รีสอร์ท/เกสเฮาส์</ion-option>
+      <ion-option value='7'>7.สถานพยาบาล:ภาครัฐ</ion-option>
+      <ion-option value='8'>8.สถานพยาบาล:ภาคเอกชน</ion-option>
+      <ion-option value='9'>9.สถานที่ราชการ/รัฐวิสาหกิจ</ion-option>
+      <ion-option value='10'>10.ศาสนสถาน</ion-option>
+      <ion-option value='11'>11.สถานศึกษา:ภาครัฐ</ion-option>
+      <ion-option value='12'>12.สถานศึกษา:ภาคเอกชน</ion-option>
+      <ion-option value='13'>13.โกดัง/โรงงาน</ion-option>
+      <ion-option value='14'>14.โรงเรือนเพาะปลูก/เลี้ยงสัตว์</ion-option>
+      <ion-option value='15'>15.อาคารกำลังก่อสร้าง</ion-option>
+      <ion-option value='16'>16.อื่นๆ</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label>การเข้าพบ /3</ion-label>
-    <ion-select [(ngModel)]="os" submitText="OK" cancelText="cancel">
-      <ion-option value="dos">DOS</ion-option>
-      <ion-option value="lunix">Linux</ion-option>
-      <ion-option value="mac7">Mac OS 7</ion-option>
-      <ion-option value="mac8">Mac OS 8</ion-option>
-      <ion-option value="win3.1">Windows 3.1</ion-option>
-      <ion-option value="win95">Windows 95</ion-option>
-      <ion-option value="win98">Windows 98</ion-option>
-    </ion-select>
-  </ion-item>
+    <ion-label>กรุณาเลือกผลการเข้าพบ </ion-label>
+  <ion-select [(ngModel)]="os" submitText="OK" cancelText="cancel">
+<ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>
+<ion-option [value]=2>2.ผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ</ion-option>
+<ion-option [value]=3>3.ไม่มี/ไม่พบผู้ให้ข้อมูล</ion-option>
+<ion-option [value]=4>4.บ้าน/อาคาร ว่างหรือร้าง</ion-option>
+</ion-select>
+</ion-item>
   <ion-item>
     <h2>ให้ขันทึกข้อความเกี่ยวกับ ปัญหา/อุปสรรค/การนัดหมาย/เหตุผล ที่นับจดไม่ได้</h2>
   </ion-item>
