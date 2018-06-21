@@ -3,23 +3,157 @@
 
 <ion-simple-wizard [(step)]="step" [showSteps]="true" (finish)="onFinish()" [finishIcon]="'done-all'" [(stepCondition)]="stepCondition">
     <ion-wizard-step>
+      <p><button ion-button color="dark" round >ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)</button></p>
+      <ion-item>
+          <ion-input placeholder="ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)" ></ion-input>
+      </ion-item>
+      <p><button ion-button color="dark" round >กิจกรรมการใช้น้ำ</button></p>
+      <h4>  1.เพื่อการอุปโภคบริโภค: สถานที่นี้มีผู้อาศัยติดต่อกันนานเกิน 3 เดือน ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
         <ion-item>
-            <h2>Ruby</h2>
-          </ion-item>
-          <ion-item>
-            <h2>Oscar</h2>
-          </ion-item>
-          <ion-item>
-            <h2>Zoey</h2>
-          </ion-item>
-          <ion-item>
-            <h2>Otto</h2>
-          </ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <h4>    2.เพื่อการเกษตร: สถานที่นี้มีผู้อาศัยมีการปลูกพืช เลี้ยงสัตว์ ทำการเกษตรเอง ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <h4>    3.เพื่อการผลิต: สถานที่นี้ใช้เพื่อการผลิต ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <h4>    4.เพื่อการบริการ: สถานที่นี้ใช้เพื่อทำการบริการ ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <p><button ion-button color="dark" round >ปัญหาและอุปสรรคที่พบ</button></p>
+    <ion-item>
+        <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" ></ion-input>
+    </ion-item>
+    <p><button ion-button color="secondary" round  (click)="GoFrom2Page()">เริ่มสำรวจ สน.2-1</button></p>
+    <br>
+    <!-- <p><button ion-button color="secondary" round >บันทึก</button></p> -->
     </ion-wizard-step>
+
+
+
     <ion-wizard-step>
-      ทดสอบ
+      <p><button ion-button color="dark" round >ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)</button></p>
+      <ion-item>
+          <ion-input placeholder="ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)" ></ion-input>
+      </ion-item>
+      <p><button ion-button color="dark" round >กิจกรรมการใช้น้ำ</button></p>
+      <h4>  1.เพื่อการอุปโภคบริโภค: สถานที่นี้มีผู้อาศัยติดต่อกันนานเกิน 3 เดือน ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <h4>    2.เพื่อการเกษตร: สถานที่นี้มีผู้อาศัยมีการปลูกพืช เลี้ยงสัตว์ ทำการเกษตรเอง ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <h4>    3.เพื่อการผลิต: สถานที่นี้ใช้เพื่อการผลิต ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <h4>    4.เพื่อการบริการ: สถานที่นี้ใช้เพื่อทำการบริการ ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <p><button ion-button color="dark" round >ปัญหาและอุปสรรคที่พบ</button></p>
+    <ion-item>
+        <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" ></ion-input>
+    </ion-item>
+    <p><button ion-button color="secondary" round  (click)="GoFrom2Page()">เริ่มสำรวจ สน.2-1</button></p>
+    <br>
     </ion-wizard-step>
+
+
     <ion-wizard-step>
-      ทดสอบ2
+      <p><button ion-button color="dark" round >ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)</button></p>
+      <ion-item>
+          <ion-input placeholder="ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)" ></ion-input>
+      </ion-item>
+      <p><button ion-button color="dark" round >กิจกรรมการใช้น้ำ</button></p>
+      <h4>  1.เพื่อการอุปโภคบริโภค: สถานที่นี้มีผู้อาศัยติดต่อกันนานเกิน 3 เดือน ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <h4>    2.เพื่อการเกษตร: สถานที่นี้มีผู้อาศัยมีการปลูกพืช เลี้ยงสัตว์ ทำการเกษตรเอง ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <h4>    3.เพื่อการผลิต: สถานที่นี้ใช้เพื่อการผลิต ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <h4>    4.เพื่อการบริการ: สถานที่นี้ใช้เพื่อทำการบริการ ใช่หรือไม่</h4>
+      <ion-item>
+          <ion-label>ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <p><button ion-button color="dark" round >ปัญหาและอุปสรรคที่พบ</button></p>
+    <ion-item>
+        <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" ></ion-input>
+    </ion-item>
+    <p><button ion-button color="secondary" round  (click)="GoFrom2Page()">เริ่มสำรวจ สน.2-1</button></p>
+    <br>
     </ion-wizard-step>
+    
 </ion-simple-wizard>
