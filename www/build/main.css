@@ -25717,12 +25717,12 @@ sn1-sec3 .button, sn1-sec3 ion-button {
   font-size: 20px;
 }
 
-page-home .segment-button {
+page-sn1 .segment-button {
   color: #fff !important;
   font-size: 20px !important;
 }
 
-page-home .segment-button.activated, page-home .segment-button.segment-activated {
+page-sn1 .segment-button.activated, page-sn1 .segment-button.segment-activated {
   border-top: 0;
   border-right: 0;
   border-bottom: 3px solid white !important;
