@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, Events} from 'ionic-angular';
+import { HomePage } from '../home/home';
 import { Platform } from 'ionic-angular';
 
 @Component({
@@ -37,6 +38,9 @@ export class SN1 {
       this.sn1="page3"
       this.isSec3Enable = true;
   })
+  }
+  goHome(){
+    this.navCtrl.push(HomePage);
   }
   
   load(){

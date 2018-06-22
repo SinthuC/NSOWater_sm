@@ -42,14 +42,73 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 194:
+/***/ 151:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SN1; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SN1 = /** @class */ (function () {
+    function SN1(navCtrl, events) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.events = events;
+        this.gaming = "n64";
+        this.gender = "f";
+        this.sn1 = "page1";
+        this.isAndroid = false;
+        this.stepCondition = true;
+        this.isSec1Enable = true;
+        this.isSec2Enable = false;
+        this.isSec3Enable = false;
+        this.events.subscribe("sec1Submitted", function () {
+            _this.sn1 = "page2";
+            _this.isSec2Enable = true;
+        });
+        this.events.subscribe("sec2Submitted", function () {
+            _this.sn1 = "page3";
+            _this.isSec3Enable = true;
+        });
+    }
+    SN1.prototype.load = function () {
+        this.sn1 = "page2";
+    };
+    SN1.prototype.stpSelect = function () {
+        console.log('STP selected');
+    };
+    SN1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-sn1',template:/*ion-inline-start:"E:\NSOWater_sm\src\pages\sn1\sn1.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="primary">\n\n    <ion-title style="text-align:center; color:red ">\n\n      แบบบันทึกการนับจด สน.1\n\n    </ion-title>\n\n  </ion-navbar>\n\n  <ion-toolbar no-border-top color="primary">\n\n    <ion-segment [(ngModel)]="sn1">\n\n      <ion-segment-button value="page1">\n\n        หน้าที่ 1\n\n      </ion-segment-button>\n\n      <ion-segment-button value="page2" [disabled]="!isSec2Enable">\n\n        หน้าที่ 2\n\n      </ion-segment-button>\n\n      <ion-segment-button value="page3" [disabled]="!isSec3Enable">\n\n        หน้าที่ 3\n\n      </ion-segment-button>\n\n    </ion-segment>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content>\n\n\n\n\n\n  <ion-grid>\n\n    <ion-row justify-content-center>\n\n      <ion-col col-12>\n\n        <div style="padding:50" [ngSwitch]="sn1">\n\n          <ion-list *ngSwitchCase="\'page1\'">\n\n            <sn1-sec1></sn1-sec1>\n\n          </ion-list>\n\n\n\n          <ion-list *ngSwitchCase="\'page2\'">\n\n            <sn1-sec2></sn1-sec2>\n\n          </ion-list>\n\n\n\n          <ion-list *ngSwitchCase="\'page3\'">\n\n            <sn1-sec3></sn1-sec3>\n\n          </ion-list>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n\n\n</ion-content>\n\n<ion-footer>\n\n  <ion-toolbar color="primary">\n\n    <ion-grid>\n\n      <ion-row no-padding no-margin>\n\n        <ion-col col-3>\n\n          <button ion-button round large (click)="goHome()" icon-start color="light">\n\n            HOME\n\n          </button>\n\n        </ion-col>\n\n        <ion-col col-auto>\n\n          <button ion-button round large icon-start color="light">\n\n            แผนที่\n\n          </button>\n\n        </ion-col>\n\n        <ion-col col-auto>\n\n          <button ion-button round large icon-start color="light">\n\n            มาตรา\n\n          </button>\n\n        </ion-col>\n\n        <ion-col col-auto>\n\n          <button ion-button round large icon-start color="light">\n\n            หยุดชั่วคราว\n\n          </button>\n\n        </ion-col>\n\n        <ion-col col-auto>\n\n          <button ion-button round large icon-start color="light">\n\n            บันทึก\n\n          </button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-toolbar>\n\n</ion-footer>\n\n<!--ion-toolbar no-border-top>\n\n    <ion-segment [(ngModel)]="sn1">\n\n      <ion-segment-button value="page1">\n\n        Puppies\n\n      </ion-segment-button>\n\n      <ion-segment-button value="kittens">\n\n        Kittens\n\n      </ion-segment-button>\n\n      <ion-segment-button value="ducklings">\n\n        Ducklings\n\n      </ion-segment-button>\n\n    </ion-segment>\n\n  </ion-toolbar>\n\n  <ion-content>\n\n    <div [ngSwitch]="sn1">\n\n      <ion-list *ngSwitchCase="page1">\n\n        <ion-item>\n\n            <ion-thumbnail item-start>\n\n            </ion-thumbnail>\n\n             <h2>Ruby</h2>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n  </ion-content>\n\n</ion-header-->\n\n\n\n<!--ion-content padding>\n\n  \n\n</ion-content-->'/*ion-inline-end:"E:\NSOWater_sm\src\pages\sn1\sn1.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */]])
+    ], SN1);
+    return SN1;
+}());
+
+//# sourceMappingURL=sn1.js.map
+
+/***/ }),
+
+/***/ 195:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IonSimpleWizard; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ion_simple_wizard_animations__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ion_simple_wizard_animations__ = __webpack_require__(196);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -152,7 +211,7 @@ var IonSimpleWizard = /** @class */ (function () {
     ], IonSimpleWizard.prototype, "stepCondition", void 0);
     IonSimpleWizard = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'ion-simple-wizard',template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/plugin/ion-wizard/ion-simple-wizard.component.html"*/'\n<div class ="ion-wizard-footer">\n        <ion-fab [@btnState] *ngIf="!isOnFirstStep()" left bottom>\n          <button ion-fab (click)="back()">\n            <ion-icon name="arrow-round-back"></ion-icon>\n          </button>\n        </ion-fab>\n        <!--Steps count-->   \n        <ion-badge style="font-size:20px" *ngIf="showSteps">ครัวเรือนที่ {{step}} / {{steps}}</ion-badge>\n        <!--Next Button-->\n        <ion-fab [@btnState] *ngIf="(!isOnFinalStep() && getCondition())" right bottom>\n          <button ion-fab (click)="next()">\n            <ion-icon name="arrow-round-forward"></ion-icon>\n          </button>\n        </ion-fab>\n        <!--Finish Button-->\n        <ion-fab [@btnState] *ngIf="(isOnFinalStep() && getCondition())" right bottom>\n          <button ion-fab (click)="finish.emit(step + 1)">\n            <ion-icon [name]="finishIcon"></ion-icon>\n          </button>\n        </ion-fab>\n      </div>\n\n\n\n<ng-content></ng-content>\n\n '/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/plugin/ion-wizard/ion-simple-wizard.component.html"*/,
+            selector: 'ion-simple-wizard',template:/*ion-inline-start:"E:\NSOWater_sm\src\plugin\ion-wizard\ion-simple-wizard.component.html"*/'\n\n<div class ="ion-wizard-footer">\n\n        <ion-fab [@btnState] *ngIf="!isOnFirstStep()" left bottom>\n\n          <button ion-fab (click)="back()">\n\n            <ion-icon name="arrow-round-back"></ion-icon>\n\n          </button>\n\n          <br>\n\n          <br>\n\n          <br>\n\n          <br>\n\n          <br>\n\n        </ion-fab>\n\n        <!--Steps count-->   \n\n        <ion-badge style="font-size:20px" *ngIf="showSteps">ครัวเรือนที่ {{step}} / {{steps}}</ion-badge>\n\n        <!--Next Button-->\n\n        <ion-fab [@btnState] *ngIf="(!isOnFinalStep() && getCondition())" right bottom>\n\n          <button ion-fab (click)="next()">\n\n            <ion-icon name="arrow-round-forward"></ion-icon>\n\n          </button>\n\n          <br>\n\n          <br>\n\n          <br>\n\n          <br>\n\n          <br>\n\n        </ion-fab>\n\n        <!--Finish Button-->\n\n        <ion-fab [@btnState] *ngIf="(isOnFinalStep() && getCondition())" right bottom>\n\n          <button ion-fab (click)="finish.emit(step + 1)">\n\n            <ion-icon [name]="finishIcon"></ion-icon>\n\n          </button>\n\n          <br>\n\n          <br>\n\n          <br>\n\n          <br>\n\n          <br>\n\n        </ion-fab>\n\n      </div>\n\n\n\n\n\n\n\n<ng-content></ng-content>\n\n\n\n '/*ion-inline-end:"E:\NSOWater_sm\src\plugin\ion-wizard\ion-simple-wizard.component.html"*/,
             animations: __WEBPACK_IMPORTED_MODULE_2__ion_simple_wizard_animations__["a" /* WizardAnimations */].btnRotate
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */]])
@@ -164,7 +223,7 @@ var IonSimpleWizard = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 195:
+/***/ 196:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -356,13 +415,13 @@ var WizardAnimations = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(221);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -370,7 +429,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 220:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -378,11 +437,11 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(271);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_sn1_sn1__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_sn1_sn1__ = __webpack_require__(151);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -438,19 +497,19 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 271:
+/***/ 272:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sn1_sec1_sn1_sec1__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sn1_sec2_sn1_sec2__ = __webpack_require__(273);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sn1_sec3_sn1_sec3__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sn1_sec1_sn1_sec1__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sn1_sec2_sn1_sec2__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sn1_sec3_sn1_sec3__ = __webpack_require__(275);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__plugin_ion_wizard_ion_simple_wizard_component__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__plugin_ion_wizard_ion_simple_wizard_step_component__ = __webpack_require__(275);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser_animations__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__plugin_ion_wizard_ion_simple_wizard_component__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__plugin_ion_wizard_ion_simple_wizard_step_component__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser_animations__ = __webpack_require__(277);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -492,7 +551,7 @@ var ComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 272:
+/***/ 273:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -527,7 +586,7 @@ var Sn1Sec1Component = /** @class */ (function () {
     };
     Sn1Sec1Component = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'sn1-sec1',template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec1/sn1-sec1.html"*/' \n <br>\n <p><button ion-button color="dark" round >ชื่อถนน/ลำน้ำ/ละแวกบ้าน</button></p>\n <ion-item>\n            <ion-input type="text" placeholder="ชื่อถนน/ลำน้ำ/ละแวกบ้าน"></ion-input>\n        </ion-item>\n  <p><button ion-button color="dark" round >ชื่อตรอก/ซอย</button></p>\n<ion-item>\n  <ion-input placeholder="ชื่อตรอก/ซอย" style="background-color:whitesmoke;color: black"></ion-input>\n</ion-item>\n<p><button ion-button color="dark" round >ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่นๆ</button></p>\n<ion-item>\n  <ion-input placeholder="ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่น" ></ion-input>\n</ion-item>\n<p><button ion-button color="dark" round >เลขที่บ้าน/อาคาร</button></p>\n<ion-item>\n  <ion-input placeholder="เลขที่บ้าน/อาคาร" ></ion-input>\n</ion-item>\n<p><button ion-button color="dark" round style="font-size: 20px">ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง</button></p>\n      <ion-item>         \n          <ion-select [(ngModel)]="os1" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">\n              <ion-option value=\'1\'>1.บ้านเดี่ยว</ion-option>\n              <ion-option value=\'2\'>2.บ้านแฝด/ทาวน์เฮ้าส์</ion-option>\n              <ion-option value=\'3\'>3.ห้องแถว/เรือนแถว/ตึกแถว</ion-option>\n              <ion-option value=\'4\'>4.อาคารสูง(คอนโดฯ/แมนชั่น/แฟลต/อพาร์ทเมนท์)</ion-option>\n              <ion-option value=\'5\'>5.อาคารสำนักงานเอกชน</ion-option>\n              <ion-option value=\'6\'>6.โรงแรม/รีสอร์ท/เกสเฮาส์</ion-option>\n              <ion-option value=\'7\'>7.สถานพยาบาล:ภาครัฐ</ion-option>\n              <ion-option value=\'8\'>8.สถานพยาบาล:ภาคเอกชน</ion-option>\n              <ion-option value=\'9\'>9.สถานที่ราชการ/รัฐวิสาหกิจ</ion-option>\n              <ion-option value=\'10\'>10.ศาสนสถาน</ion-option>\n              <ion-option value=\'11\'>11.สถานศึกษา:ภาครัฐ</ion-option>\n              <ion-option value=\'12\'>12.สถานศึกษา:ภาคเอกชน</ion-option>\n              <ion-option value=\'13\'>13.โกดัง/โรงงาน</ion-option>\n              <ion-option value=\'14\'>14.โรงเรือนเพาะปลูก/เลี้ยงสัตว์</ion-option>\n              <ion-option value=\'15\'>15.อาคารกำลังก่อสร้าง</ion-option>\n              <ion-option value=\'16\'>16.อื่นๆ</ion-option>\n          </ion-select>\n    </ion-item>\n\n    <p><button ion-button color="dark" round >กรุณาเลือกผลการเข้าพบ </button></p>\n    <ion-item>         \n        <ion-select [(ngModel)]="os2" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">\n            <ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>\n            <ion-option [value]=2>2.มีผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ</ion-option>\n            <ion-option [value]=3>3.ไม่มี/ไม่พบผู้ให้ข้อมูล</ion-option>\n            <ion-option [value]=4>4.บ้าน/อาคาร ว่างหรือร้าง</ion-option>\n        </ion-select>\n  </ion-item>\n  <p><button ion-button color="dark" round style="font-size: 20px">ให้ขันทึกข้อความเกี่ยวกับ ปัญหา/อุปสรรค/การนัดหมาย/เหตุผล ที่นับจดไม่ได้</button></p>\n  <ion-item>\n    <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" style="background-color:whitesmoke;color: black"></ion-input>\n  </ion-item>\n  <button ion-button round (click)="submit()">ถัดไป ></button>\n'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec1/sn1-sec1.html"*/
+            selector: 'sn1-sec1',template:/*ion-inline-start:"E:\NSOWater_sm\src\components\sn1-sec1\sn1-sec1.html"*/' \n\n <br>\n\n <p><button ion-button color="dark" round >ชื่อถนน/ลำน้ำ/ละแวกบ้าน</button></p>\n\n <ion-item>\n\n            <ion-input type="text" placeholder="ชื่อถนน/ลำน้ำ/ละแวกบ้าน"></ion-input>\n\n        </ion-item>\n\n  <p><button ion-button color="dark" round >ชื่อตรอก/ซอย</button></p>\n\n<ion-item>\n\n  <ion-input placeholder="ชื่อตรอก/ซอย" style="background-color:whitesmoke;color: black"></ion-input>\n\n</ion-item>\n\n<p><button ion-button color="dark" round >ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่นๆ</button></p>\n\n<ion-item>\n\n  <ion-input placeholder="ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่น" ></ion-input>\n\n</ion-item>\n\n<p><button ion-button color="dark" round >เลขที่บ้าน/อาคาร</button></p>\n\n<ion-item>\n\n  <ion-input placeholder="เลขที่บ้าน/อาคาร" ></ion-input>\n\n</ion-item>\n\n<p><button ion-button color="dark" round style="font-size: 20px">ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง</button></p>\n\n      <ion-item>         \n\n          <ion-select [(ngModel)]="os1" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">\n\n              <ion-option value=\'1\'>1.บ้านเดี่ยว</ion-option>\n\n              <ion-option value=\'2\'>2.บ้านแฝด/ทาวน์เฮ้าส์</ion-option>\n\n              <ion-option value=\'3\'>3.ห้องแถว/เรือนแถว/ตึกแถว</ion-option>\n\n              <ion-option value=\'4\'>4.อาคารสูง(คอนโดฯ/แมนชั่น/แฟลต/อพาร์ทเมนท์)</ion-option>\n\n              <ion-option value=\'5\'>5.อาคารสำนักงานเอกชน</ion-option>\n\n              <ion-option value=\'6\'>6.โรงแรม/รีสอร์ท/เกสเฮาส์</ion-option>\n\n              <ion-option value=\'7\'>7.สถานพยาบาล:ภาครัฐ</ion-option>\n\n              <ion-option value=\'8\'>8.สถานพยาบาล:ภาคเอกชน</ion-option>\n\n              <ion-option value=\'9\'>9.สถานที่ราชการ/รัฐวิสาหกิจ</ion-option>\n\n              <ion-option value=\'10\'>10.ศาสนสถาน</ion-option>\n\n              <ion-option value=\'11\'>11.สถานศึกษา:ภาครัฐ</ion-option>\n\n              <ion-option value=\'12\'>12.สถานศึกษา:ภาคเอกชน</ion-option>\n\n              <ion-option value=\'13\'>13.โกดัง/โรงงาน</ion-option>\n\n              <ion-option value=\'14\'>14.โรงเรือนเพาะปลูก/เลี้ยงสัตว์</ion-option>\n\n              <ion-option value=\'15\'>15.อาคารกำลังก่อสร้าง</ion-option>\n\n              <ion-option value=\'16\'>16.อื่นๆ</ion-option>\n\n          </ion-select>\n\n    </ion-item>\n\n\n\n    <p><button ion-button color="dark" round >กรุณาเลือกผลการเข้าพบ </button></p>\n\n    <ion-item>         \n\n        <ion-select [(ngModel)]="os2" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">\n\n            <ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>\n\n            <ion-option [value]=2>2.มีผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ</ion-option>\n\n            <ion-option [value]=3>3.ไม่มี/ไม่พบผู้ให้ข้อมูล</ion-option>\n\n            <ion-option [value]=4>4.บ้าน/อาคาร ว่างหรือร้าง</ion-option>\n\n        </ion-select>\n\n  </ion-item>\n\n  <p><button ion-button color="dark" round style="font-size: 20px">ให้ขันทึกข้อความเกี่ยวกับ ปัญหา/อุปสรรค/การนัดหมาย/เหตุผล ที่นับจดไม่ได้</button></p>\n\n  <ion-item>\n\n    <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" style="background-color:whitesmoke;color: black"></ion-input>\n\n  </ion-item>\n\n  <br>\n\n  <ion-buttons text-center>\n\n    <button ion-button large round (click)="submit()" >ถัดไป ></button>\n\n  </ion-buttons>'/*ion-inline-end:"E:\NSOWater_sm\src\components\sn1-sec1\sn1-sec1.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */]])
     ], Sn1Sec1Component);
@@ -538,7 +597,7 @@ var Sn1Sec1Component = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 273:
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -573,7 +632,7 @@ var Sn1Sec2Component = /** @class */ (function () {
     };
     Sn1Sec2Component = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'sn1-sec2',template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec2/sn1-sec2.html"*/'<p><button ion-button color="dark" round >จำนวนครัวเรือน/สถานประกอบการรวมทั้งหมด ในบ้าน/อาคาร/สิ่งปลูกสร้าง</button></p>\n<ion-item>\n  <ion-input placeholder="กรอกจำนวน" ></ion-input>\n</ion-item>\n<button ion-button round (click)="submit()">ถัดไป ></button>'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec2/sn1-sec2.html"*/
+            selector: 'sn1-sec2',template:/*ion-inline-start:"E:\NSOWater_sm\src\components\sn1-sec2\sn1-sec2.html"*/'<p><button ion-button color="dark" round >จำนวนครัวเรือน/สถานประกอบการรวมทั้งหมด ในบ้าน/อาคาร/สิ่งปลูกสร้าง</button></p>\n\n<ion-item>\n\n  <ion-input placeholder="กรอกจำนวน" ></ion-input>\n\n</ion-item>\n\n<br>\n\n<ion-buttons text-center>\n\n    <button ion-button large round (click)="submit()" >ถัดไป ></button>\n\n  </ion-buttons>'/*ion-inline-end:"E:\NSOWater_sm\src\components\sn1-sec2\sn1-sec2.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */]])
     ], Sn1Sec2Component);
@@ -584,7 +643,7 @@ var Sn1Sec2Component = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 274:
+/***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -618,7 +677,7 @@ var Sn1Sec3Component = /** @class */ (function () {
     };
     Sn1Sec3Component = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'sn1-sec3',template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec3/sn1-sec3.html"*/'\n\n\n<ion-simple-wizard [(step)]="step" [showSteps]="true" (finish)="onFinish()" [finishIcon]="\'done-all\'" [(stepCondition)]="stepCondition">\n    <ion-wizard-step>\n      <p><button ion-button color="dark" round >ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)</button></p>\n      <ion-item>\n          <ion-input placeholder="ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)" ></ion-input>\n      </ion-item>\n      <ion-item>         \n        <ion-select [(ngModel)]="os2" interface="popover" placeholder="กรุณาเลือกการเข้าพบ" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">\n            <ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>\n            <ion-option [value]=2>2.มีผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ</ion-option>\n            <ion-option [value]=3>3.ไม่มี/ไม่พบผู้ให้ข้อมูล</ion-option>\n            <ion-option [value]=4>4.บ้าน/อาคาร ว่างหรือร้าง</ion-option>\n        </ion-select>\n  </ion-item>\n      <p><button ion-button color="dark" round >กิจกรรมการใช้น้ำ</button></p>\n      <h4>  1.เพื่อการอุปโภคบริโภค: สถานที่นี้มีผู้อาศัยติดต่อกันนานเกิน 3 เดือน ใช่หรือไม่</h4>\n      <ion-row radio-group >\n        <ion-col>\n          <ion-item>\n            <ion-radio item-left [value]=true></ion-radio>\n            <ion-label>ใช่</ion-label>\n          </ion-item>\n        </ion-col>\n        <ion-col>\n          <ion-item>\n            <ion-radio item-left [value]=false></ion-radio>\n            <ion-label>ไม่ใช่</ion-label>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n        <h4>    2.เพื่อการเกษตร: สถานที่นี้มีผู้อาศัยมีการปลูกพืช เลี้ยงสัตว์ ทำการเกษตรเอง ใช่หรือไม่</h4>\n        <ion-row radio-group >\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=true></ion-radio>\n              <ion-label>ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=false></ion-radio>\n              <ion-label>ไม่ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <h4>    3.เพื่อการผลิต: สถานที่นี้ใช้เพื่อการผลิต ใช่หรือไม่</h4>\n        <ion-row radio-group >\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=true></ion-radio>\n              <ion-label>ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=false></ion-radio>\n              <ion-label>ไม่ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <h4>    4.เพื่อการบริการ: สถานที่นี้ใช้เพื่อทำการบริการ ใช่หรือไม่</h4>\n        <ion-row radio-group >\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=true></ion-radio>\n              <ion-label>ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=false></ion-radio>\n              <ion-label>ไม่ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <p><button ion-button color="dark" round >ปัญหาและอุปสรรคที่พบ</button></p>\n    <ion-item>\n        <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" ></ion-input>\n    </ion-item>\n    <p><button ion-button  round  >เริ่มสำรวจ สน.2-1</button></p>\n    <br>\n    <!-- <p><button ion-button color="secondary" round >บันทึก</button></p> -->\n    </ion-wizard-step>\n\n\n\n    <ion-wizard-step>\n      <p><button ion-button color="dark" round >ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)</button></p>\n      <ion-item>\n          <ion-input placeholder="ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)" ></ion-input>\n      </ion-item>\n      <ion-item>         \n        <ion-select [(ngModel)]="os2" interface="popover" placeholder="กรุณาเลือกการเข้าพบ" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">\n            <ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>\n            <ion-option [value]=2>2.มีผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ</ion-option>\n            <ion-option [value]=3>3.ไม่มี/ไม่พบผู้ให้ข้อมูล</ion-option>\n            <ion-option [value]=4>4.บ้าน/อาคาร ว่างหรือร้าง</ion-option>\n        </ion-select>\n  </ion-item>\n      <p><button ion-button color="dark" round >กิจกรรมการใช้น้ำ</button></p>\n      <h4>  1.เพื่อการอุปโภคบริโภค: สถานที่นี้มีผู้อาศัยติดต่อกันนานเกิน 3 เดือน ใช่หรือไม่</h4>\n      <ion-row radio-group >\n        <ion-col>\n          <ion-item>\n            <ion-radio item-left [value]=true></ion-radio>\n            <ion-label>ใช่</ion-label>\n          </ion-item>\n        </ion-col>\n        <ion-col>\n          <ion-item>\n            <ion-radio item-left [value]=false></ion-radio>\n            <ion-label>ไม่ใช่</ion-label>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n        <h4>    2.เพื่อการเกษตร: สถานที่นี้มีผู้อาศัยมีการปลูกพืช เลี้ยงสัตว์ ทำการเกษตรเอง ใช่หรือไม่</h4>\n        <ion-row radio-group >\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=true></ion-radio>\n              <ion-label>ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=false></ion-radio>\n              <ion-label>ไม่ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <h4>    3.เพื่อการผลิต: สถานที่นี้ใช้เพื่อการผลิต ใช่หรือไม่</h4>\n        <ion-row radio-group >\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=true></ion-radio>\n              <ion-label>ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=false></ion-radio>\n              <ion-label>ไม่ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <h4>    4.เพื่อการบริการ: สถานที่นี้ใช้เพื่อทำการบริการ ใช่หรือไม่</h4>\n        <ion-row radio-group >\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=true></ion-radio>\n              <ion-label>ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=false></ion-radio>\n              <ion-label>ไม่ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <p><button ion-button color="dark" round >ปัญหาและอุปสรรคที่พบ</button></p>\n    <ion-item>\n        <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" ></ion-input>\n    </ion-item>\n    <p><button ion-button  round  >เริ่มสำรวจ สน.2-1</button></p>\n    <br>\n    </ion-wizard-step>\n\n\n    <ion-wizard-step>\n      <p><button ion-button color="dark" round >ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)</button></p>\n      <ion-item>\n          <ion-input placeholder="ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)" ></ion-input>\n      </ion-item>\n      <ion-item>         \n        <ion-select [(ngModel)]="os2" interface="popover" placeholder="กรุณาเลือกการเข้าพบ" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">\n            <ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>\n            <ion-option [value]=2>2.มีผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ</ion-option>\n            <ion-option [value]=3>3.ไม่มี/ไม่พบผู้ให้ข้อมูล</ion-option>\n            <ion-option [value]=4>4.บ้าน/อาคาร ว่างหรือร้าง</ion-option>\n        </ion-select>\n  </ion-item>\n      <p><button ion-button color="dark" round >กิจกรรมการใช้น้ำ</button></p>\n      <h4>  1.เพื่อการอุปโภคบริโภค: สถานที่นี้มีผู้อาศัยติดต่อกันนานเกิน 3 เดือน ใช่หรือไม่</h4>\n      <ion-row radio-group >\n        <ion-col>\n          <ion-item>\n            <ion-radio item-left [value]=true></ion-radio>\n            <ion-label>ใช่</ion-label>\n          </ion-item>\n        </ion-col>\n        <ion-col>\n          <ion-item>\n            <ion-radio item-left [value]=false></ion-radio>\n            <ion-label>ไม่ใช่</ion-label>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n        <h4>    2.เพื่อการเกษตร: สถานที่นี้มีผู้อาศัยมีการปลูกพืช เลี้ยงสัตว์ ทำการเกษตรเอง ใช่หรือไม่</h4>\n        <ion-row radio-group >\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=true></ion-radio>\n              <ion-label>ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=false></ion-radio>\n              <ion-label>ไม่ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <h4>    3.เพื่อการผลิต: สถานที่นี้ใช้เพื่อการผลิต ใช่หรือไม่</h4>\n        <ion-row radio-group >\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=true></ion-radio>\n              <ion-label>ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=false></ion-radio>\n              <ion-label>ไม่ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <h4>    4.เพื่อการบริการ: สถานที่นี้ใช้เพื่อทำการบริการ ใช่หรือไม่</h4>\n        <ion-row radio-group >\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=true></ion-radio>\n              <ion-label>ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n          <ion-col>\n            <ion-item>\n              <ion-radio item-left [value]=false></ion-radio>\n              <ion-label>ไม่ใช่</ion-label>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <p><button ion-button color="dark" round >ปัญหาและอุปสรรคที่พบ</button></p>\n    <ion-item>\n        <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" ></ion-input>\n    </ion-item>\n    <p><button ion-button  round  >เริ่มสำรวจ สน.2-1</button></p>\n    <br>\n    </ion-wizard-step>\n</ion-simple-wizard>\n'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/components/sn1-sec3/sn1-sec3.html"*/
+            selector: 'sn1-sec3',template:/*ion-inline-start:"E:\NSOWater_sm\src\components\sn1-sec3\sn1-sec3.html"*/'\n\n\n\n\n\n<ion-simple-wizard [(step)]="step" [showSteps]="true" (finish)="onFinish()" [finishIcon]="\'done-all\'" [(stepCondition)]="stepCondition">\n\n    <ion-wizard-step>\n\n      <p><button ion-button color="dark" round >ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)</button></p>\n\n      <ion-item>\n\n          <ion-input placeholder="ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)" ></ion-input>\n\n      </ion-item>\n\n      <ion-item>         \n\n        <ion-select [(ngModel)]="os2" interface="popover" placeholder="กรุณาเลือกการเข้าพบ" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">\n\n            <ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>\n\n            <ion-option [value]=2>2.มีผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ</ion-option>\n\n            <ion-option [value]=3>3.ไม่มี/ไม่พบผู้ให้ข้อมูล</ion-option>\n\n            <ion-option [value]=4>4.บ้าน/อาคาร ว่างหรือร้าง</ion-option>\n\n        </ion-select>\n\n  </ion-item>\n\n      <p><button ion-button color="dark" round >กิจกรรมการใช้น้ำ</button></p>\n\n      <h4>  1.เพื่อการอุปโภคบริโภค: สถานที่นี้มีผู้อาศัยติดต่อกันนานเกิน 3 เดือน ใช่หรือไม่</h4>\n\n      <ion-row radio-group >\n\n        <ion-col>\n\n          <ion-item>\n\n            <ion-radio item-left [value]=true></ion-radio>\n\n            <ion-label>ใช่</ion-label>\n\n          </ion-item>\n\n        </ion-col>\n\n        <ion-col>\n\n          <ion-item>\n\n            <ion-radio item-left [value]=false></ion-radio>\n\n            <ion-label>ไม่ใช่</ion-label>\n\n          </ion-item>\n\n        </ion-col>\n\n      </ion-row>\n\n        <h4>    2.เพื่อการเกษตร: สถานที่นี้มีผู้อาศัยมีการปลูกพืช เลี้ยงสัตว์ ทำการเกษตรเอง ใช่หรือไม่</h4>\n\n        <ion-row radio-group >\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=true></ion-radio>\n\n              <ion-label>ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=false></ion-radio>\n\n              <ion-label>ไม่ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n        </ion-row>\n\n        <h4>    3.เพื่อการผลิต: สถานที่นี้ใช้เพื่อการผลิต ใช่หรือไม่</h4>\n\n        <ion-row radio-group >\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=true></ion-radio>\n\n              <ion-label>ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=false></ion-radio>\n\n              <ion-label>ไม่ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n        </ion-row>\n\n        <h4>    4.เพื่อการบริการ: สถานที่นี้ใช้เพื่อทำการบริการ ใช่หรือไม่</h4>\n\n        <ion-row radio-group >\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=true></ion-radio>\n\n              <ion-label>ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=false></ion-radio>\n\n              <ion-label>ไม่ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n        </ion-row>\n\n        <p><button ion-button color="dark" round >ปัญหาและอุปสรรคที่พบ</button></p>\n\n    <ion-item>\n\n        <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" ></ion-input>\n\n    </ion-item>\n\n    <br>\n\n    <ion-buttons text-center>\n\n        <button ion-button round  >เริ่มสำรวจ สน.2-1</button>\n\n    </ion-buttons>\n\n    <br>\n\n    <br>\n\n    </ion-wizard-step>\n\n\n\n\n\n\n\n    <ion-wizard-step>\n\n      <p><button ion-button color="dark" round >ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)</button></p>\n\n      <ion-item>\n\n          <ion-input placeholder="ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)" ></ion-input>\n\n      </ion-item>\n\n      <ion-item>         \n\n        <ion-select [(ngModel)]="os2" interface="popover" placeholder="กรุณาเลือกการเข้าพบ" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">\n\n            <ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>\n\n            <ion-option [value]=2>2.มีผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ</ion-option>\n\n            <ion-option [value]=3>3.ไม่มี/ไม่พบผู้ให้ข้อมูล</ion-option>\n\n            <ion-option [value]=4>4.บ้าน/อาคาร ว่างหรือร้าง</ion-option>\n\n        </ion-select>\n\n  </ion-item>\n\n      <p><button ion-button color="dark" round >กิจกรรมการใช้น้ำ</button></p>\n\n      <h4>  1.เพื่อการอุปโภคบริโภค: สถานที่นี้มีผู้อาศัยติดต่อกันนานเกิน 3 เดือน ใช่หรือไม่</h4>\n\n      <ion-row radio-group >\n\n        <ion-col>\n\n          <ion-item>\n\n            <ion-radio item-left [value]=true></ion-radio>\n\n            <ion-label>ใช่</ion-label>\n\n          </ion-item>\n\n        </ion-col>\n\n        <ion-col>\n\n          <ion-item>\n\n            <ion-radio item-left [value]=false></ion-radio>\n\n            <ion-label>ไม่ใช่</ion-label>\n\n          </ion-item>\n\n        </ion-col>\n\n      </ion-row>\n\n        <h4>    2.เพื่อการเกษตร: สถานที่นี้มีผู้อาศัยมีการปลูกพืช เลี้ยงสัตว์ ทำการเกษตรเอง ใช่หรือไม่</h4>\n\n        <ion-row radio-group >\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=true></ion-radio>\n\n              <ion-label>ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=false></ion-radio>\n\n              <ion-label>ไม่ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n        </ion-row>\n\n        <h4>    3.เพื่อการผลิต: สถานที่นี้ใช้เพื่อการผลิต ใช่หรือไม่</h4>\n\n        <ion-row radio-group >\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=true></ion-radio>\n\n              <ion-label>ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=false></ion-radio>\n\n              <ion-label>ไม่ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n        </ion-row>\n\n        <h4>    4.เพื่อการบริการ: สถานที่นี้ใช้เพื่อทำการบริการ ใช่หรือไม่</h4>\n\n        <ion-row radio-group >\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=true></ion-radio>\n\n              <ion-label>ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=false></ion-radio>\n\n              <ion-label>ไม่ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n        </ion-row>\n\n        <p><button ion-button color="dark" round >ปัญหาและอุปสรรคที่พบ</button></p>\n\n    <ion-item>\n\n        <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" ></ion-input>\n\n    </ion-item>\n\n    <br>\n\n    <ion-buttons text-center>\n\n        <button ion-button round  >เริ่มสำรวจ สน.2-1</button>\n\n    </ion-buttons>\n\n    <br>\n\n    <br>\n\n    </ion-wizard-step>\n\n\n\n\n\n    <ion-wizard-step>\n\n      <p><button ion-button color="dark" round >ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)</button></p>\n\n      <ion-item>\n\n          <ion-input placeholder="ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)" ></ion-input>\n\n      </ion-item>\n\n      <ion-item>         \n\n        <ion-select [(ngModel)]="os2" interface="popover" placeholder="กรุณาเลือกการเข้าพบ" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">\n\n            <ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>\n\n            <ion-option [value]=2>2.มีผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ</ion-option>\n\n            <ion-option [value]=3>3.ไม่มี/ไม่พบผู้ให้ข้อมูล</ion-option>\n\n            <ion-option [value]=4>4.บ้าน/อาคาร ว่างหรือร้าง</ion-option>\n\n        </ion-select>\n\n  </ion-item>\n\n      <p><button ion-button color="dark" round >กิจกรรมการใช้น้ำ</button></p>\n\n      <h4>  1.เพื่อการอุปโภคบริโภค: สถานที่นี้มีผู้อาศัยติดต่อกันนานเกิน 3 เดือน ใช่หรือไม่</h4>\n\n      <ion-row radio-group >\n\n        <ion-col>\n\n          <ion-item>\n\n            <ion-radio item-left [value]=true></ion-radio>\n\n            <ion-label>ใช่</ion-label>\n\n          </ion-item>\n\n        </ion-col>\n\n        <ion-col>\n\n          <ion-item>\n\n            <ion-radio item-left [value]=false></ion-radio>\n\n            <ion-label>ไม่ใช่</ion-label>\n\n          </ion-item>\n\n        </ion-col>\n\n      </ion-row>\n\n        <h4>    2.เพื่อการเกษตร: สถานที่นี้มีผู้อาศัยมีการปลูกพืช เลี้ยงสัตว์ ทำการเกษตรเอง ใช่หรือไม่</h4>\n\n        <ion-row radio-group >\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=true></ion-radio>\n\n              <ion-label>ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=false></ion-radio>\n\n              <ion-label>ไม่ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n        </ion-row>\n\n        <h4>    3.เพื่อการผลิต: สถานที่นี้ใช้เพื่อการผลิต ใช่หรือไม่</h4>\n\n        <ion-row radio-group >\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=true></ion-radio>\n\n              <ion-label>ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=false></ion-radio>\n\n              <ion-label>ไม่ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n        </ion-row>\n\n        <h4>    4.เพื่อการบริการ: สถานที่นี้ใช้เพื่อทำการบริการ ใช่หรือไม่</h4>\n\n        <ion-row radio-group >\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=true></ion-radio>\n\n              <ion-label>ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n          <ion-col>\n\n            <ion-item>\n\n              <ion-radio item-left [value]=false></ion-radio>\n\n              <ion-label>ไม่ใช่</ion-label>\n\n            </ion-item>\n\n          </ion-col>\n\n        </ion-row>\n\n        <p><button ion-button color="dark" round >ปัญหาและอุปสรรคที่พบ</button></p>\n\n    <ion-item>\n\n        <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" ></ion-input>\n\n    </ion-item>\n\n    <br>\n\n    <ion-buttons text-center>\n\n        <button ion-button round  >เริ่มสำรวจ สน.2-1</button>\n\n    </ion-buttons>\n\n    <br>\n\n    <br>\n\n    </ion-wizard-step>\n\n</ion-simple-wizard>\n\n'/*ion-inline-end:"E:\NSOWater_sm\src\components\sn1-sec3\sn1-sec3.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], Sn1Sec3Component);
@@ -629,15 +688,15 @@ var Sn1Sec3Component = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 275:
+/***/ 276:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IonSimpleWizardStep; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ion_simple_wizard_component__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ion_simple_wizard_component__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ion_simple_wizard_animations__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ion_simple_wizard_animations__ = __webpack_require__(196);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -683,15 +742,15 @@ var IonSimpleWizardStep = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 278:
+/***/ 279:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -718,7 +777,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"E:\NSOWater_sm\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"E:\NSOWater_sm\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -729,65 +788,6 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 279:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SN1; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var SN1 = /** @class */ (function () {
-    function SN1(navCtrl, events) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.events = events;
-        this.gaming = "n64";
-        this.gender = "f";
-        this.sn1 = "page1";
-        this.isAndroid = false;
-        this.stepCondition = true;
-        this.isSec1Enable = true;
-        this.isSec2Enable = false;
-        this.isSec3Enable = false;
-        this.events.subscribe("sec1Submitted", function () {
-            _this.sn1 = "page2";
-            _this.isSec2Enable = true;
-        });
-        this.events.subscribe("sec2Submitted", function () {
-            _this.sn1 = "page3";
-            _this.isSec3Enable = true;
-        });
-    }
-    SN1.prototype.load = function () {
-        this.sn1 = "page2";
-    };
-    SN1.prototype.stpSelect = function () {
-        console.log('STP selected');
-    };
-    SN1 = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-sn1',template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/pages/sn1/sn1.html"*/'<ion-header>\n\n  <ion-navbar  color="primary">\n    <ion-title style="text-align:center; color:red ">\n      แบบบันทึกการนับจด สน.1\n    </ion-title>\n  </ion-navbar>\n  <ion-toolbar no-border-top color="primary" >\n    <ion-segment [(ngModel)]="sn1" >\n      <ion-segment-button value="page1" >\n        หน้าที่ 1\n      </ion-segment-button>\n      <ion-segment-button value="page2" [disabled]="!isSec2Enable" >\n        หน้าที่ 2\n      </ion-segment-button>\n      <ion-segment-button value="page3" [disabled]="!isSec3Enable" >\n        หน้าที่ 3\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content>\n\n    \n  <ion-grid >\n    <ion-row justify-content-center >\n      <ion-col col-12  >\n          <div style="padding:50" [ngSwitch]="sn1">\n              <ion-list *ngSwitchCase="\'page1\'">\n                <sn1-sec1></sn1-sec1>\n              </ion-list>\n        \n              <ion-list *ngSwitchCase="\'page2\'">\n                <sn1-sec2></sn1-sec2>\n              </ion-list>\n        \n              <ion-list *ngSwitchCase="\'page3\'">\n                <sn1-sec3></sn1-sec3>\n              </ion-list>\n            </div>\n      </ion-col>\n    </ion-row>\n    </ion-grid>\n    \n</ion-content>\n\n<!--ion-toolbar no-border-top>\n    <ion-segment [(ngModel)]="sn1">\n      <ion-segment-button value="page1">\n        Puppies\n      </ion-segment-button>\n      <ion-segment-button value="kittens">\n        Kittens\n      </ion-segment-button>\n      <ion-segment-button value="ducklings">\n        Ducklings\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n  <ion-content>\n    <div [ngSwitch]="sn1">\n      <ion-list *ngSwitchCase="page1">\n        <ion-item>\n            <ion-thumbnail item-start>\n            </ion-thumbnail>\n             <h2>Ruby</h2>\n        </ion-item>\n      </ion-list>\n    </div>\n  </ion-content>\n</ion-header-->\n\n<!--ion-content padding>\n  \n</ion-content-->'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/pages/sn1/sn1.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */]])
-    ], SN1);
-    return SN1;
-}());
-
-//# sourceMappingURL=sn1.js.map
-
-/***/ }),
-
 /***/ 99:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -795,7 +795,7 @@ var SN1 = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sn1_sn1__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sn1_sn1__ = __webpack_require__(151);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -827,17 +827,16 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/pomgade/Desktop/NSOWater_sm/src/pages/home/home.html"*/'<!--\n  Generated template for the HomePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>home</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <button ion-button round (click)="generateSN1()">ถัดไป ></button>\n</ion-content>\n'/*ion-inline-end:"/Users/pomgade/Desktop/NSOWater_sm/src/pages/home/home.html"*/,
+            selector: 'page-home',template:/*ion-inline-start:"E:\NSOWater_sm\src\pages\home\home.html"*/'<!--\n\n  Generated template for the HomePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>home</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <button ion-button round (click)="generateSN1()">ถัดไป ></button>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\NSOWater_sm\src\pages\home\home.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], HomePage);
     return HomePage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=home.js.map
 
 /***/ })
 
-},[197]);
+},[198]);
 //# sourceMappingURL=main.js.map

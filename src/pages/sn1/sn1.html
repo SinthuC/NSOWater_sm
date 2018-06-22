@@ -1,19 +1,19 @@
 <ion-header>
 
-  <ion-navbar  color="primary">
+  <ion-navbar color="primary">
     <ion-title style="text-align:center; color:red ">
       แบบบันทึกการนับจด สน.1
     </ion-title>
   </ion-navbar>
-  <ion-toolbar no-border-top color="primary" >
-    <ion-segment [(ngModel)]="sn1" >
-      <ion-segment-button value="page1" >
+  <ion-toolbar no-border-top color="primary">
+    <ion-segment [(ngModel)]="sn1">
+      <ion-segment-button value="page1">
         หน้าที่ 1
       </ion-segment-button>
-      <ion-segment-button value="page2" [disabled]="!isSec2Enable" >
+      <ion-segment-button value="page2" [disabled]="!isSec2Enable">
         หน้าที่ 2
       </ion-segment-button>
-      <ion-segment-button value="page3" [disabled]="!isSec3Enable" >
+      <ion-segment-button value="page3" [disabled]="!isSec3Enable">
         หน้าที่ 3
       </ion-segment-button>
     </ion-segment>
@@ -24,31 +24,59 @@
 
 <ion-content>
 
-    
-  <ion-grid >
-    <ion-row justify-content-center >
-      <ion-col col-12  >
-          <div style="padding:50" [ngSwitch]="sn1">
-              <ion-list *ngSwitchCase="'page1'">
-                <sn1-sec1></sn1-sec1>
-              </ion-list>
-        
-              <ion-list *ngSwitchCase="'page2'">
-                <sn1-sec2></sn1-sec2>
-              </ion-list>
-        
-              <ion-list *ngSwitchCase="'page3'">
-                <sn1-sec3></sn1-sec3>
-              </ion-list>
-            </div>
+
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col col-12>
+        <div style="padding:50" [ngSwitch]="sn1">
+          <ion-list *ngSwitchCase="'page1'">
+            <sn1-sec1></sn1-sec1>
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'page2'">
+            <sn1-sec2></sn1-sec2>
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'page3'">
+            <sn1-sec3></sn1-sec3>
+          </ion-list>
+        </div>
       </ion-col>
     </ion-row>
-    </ion-grid>
-    
+  </ion-grid>
+
 </ion-content>
 <ion-footer>
-  <ion-toolbar>
-    <ion-title>Footer</ion-title>
+  <ion-toolbar color="primary">
+    <ion-grid>
+      <ion-row no-padding no-margin>
+        <ion-col col-3>
+          <button ion-button round large (click)="goHome()" icon-start color="light">
+            HOME
+          </button>
+        </ion-col>
+        <ion-col col-auto>
+          <button ion-button round large icon-start color="light">
+            แผนที่
+          </button>
+        </ion-col>
+        <ion-col col-auto>
+          <button ion-button round large icon-start color="light">
+            มาตรา
+          </button>
+        </ion-col>
+        <ion-col col-auto>
+          <button ion-button round large icon-start color="light">
+            หยุดชั่วคราว
+          </button>
+        </ion-col>
+        <ion-col col-auto>
+          <button ion-button round large icon-start color="light">
+            บันทึก
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-footer>
 <!--ion-toolbar no-border-top>
