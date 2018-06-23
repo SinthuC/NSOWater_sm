@@ -1,6 +1,6 @@
 page-home {
 .toolbar{
-    font-size: 20px;
+    font-size: 16px;
     text-align:center;
     color:white;
     padding:0;
@@ -12,6 +12,8 @@ page-home {
 }
 
   .full-width-select {
+    height:110%;
+    max-height:150%;
     width: 100%;
     max-width: 100%;
   }
