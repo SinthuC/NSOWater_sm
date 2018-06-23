@@ -16,7 +16,7 @@ import { SN1 } from '../sn1/sn1'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public menu : MenuController,public modal: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public menu : MenuController,private modal: ModalController) {
     menu.enable(true);
   }
   
@@ -25,7 +25,9 @@ export class HomePage {
     this.navCtrl.push(SN1);
   }
   openModal(){
-    this.modal.create('ModalPage');
+    const myModal = this.modal.create('ModalPage');
+  
+    myModal.present();
     }
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
