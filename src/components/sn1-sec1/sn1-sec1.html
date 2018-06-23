@@ -1,22 +1,21 @@
  
- <br>
- <p><button ion-button color="dark" round >ชื่อถนน/ลำน้ำ/ละแวกบ้าน</button></p>
+ <p><button ion-button  round outline>ชื่อถนน/ลำน้ำ/ละแวกบ้าน</button></p>
  <ion-item>
             <ion-input type="text" placeholder="ชื่อถนน/ลำน้ำ/ละแวกบ้าน"></ion-input>
         </ion-item>
-  <p><button ion-button color="dark" round >ชื่อตรอก/ซอย</button></p>
+  <p><button ion-button  round outline>ชื่อตรอก/ซอย</button></p>
 <ion-item>
   <ion-input placeholder="ชื่อตรอก/ซอย" style="background-color:whitesmoke;color: black"></ion-input>
 </ion-item>
-<p><button ion-button color="dark" round >ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่นๆ</button></p>
+<p><button ion-button  round outline>ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่นๆ</button></p>
 <ion-item>
   <ion-input placeholder="ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่น" ></ion-input>
 </ion-item>
-<p><button ion-button color="dark" round >เลขที่บ้าน/อาคาร</button></p>
+<p><button ion-button  round outline>เลขที่บ้าน/อาคาร</button></p>
 <ion-item>
   <ion-input placeholder="เลขที่บ้าน/อาคาร" ></ion-input>
 </ion-item>
-<p><button ion-button color="dark" round style="font-size: 20px">ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง</button></p>
+<p><button ion-button  round style="font-size: 20px" outline>ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง</button></p>
       <ion-item>         
           <ion-select [(ngModel)]="os1" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">
               <ion-option value='1'>1.บ้านเดี่ยว</ion-option>
@@ -38,7 +37,7 @@
           </ion-select>
     </ion-item>
 
-    <p><button ion-button color="dark" round >กรุณาเลือกผลการเข้าพบ </button></p>
+    <p><button ion-button  round outline>กรุณาเลือกผลการเข้าพบ </button></p>
     <ion-item>         
         <ion-select [(ngModel)]="os2" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black">
             <ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>
@@ -47,11 +46,11 @@
             <ion-option [value]=4>4.บ้าน/อาคาร ว่างหรือร้าง</ion-option>
         </ion-select>
   </ion-item>
-  <p><button ion-button color="dark" round style="font-size: 20px">ให้ขันทึกข้อความเกี่ยวกับ ปัญหา/อุปสรรค/การนัดหมาย/เหตุผล ที่นับจดไม่ได้</button></p>
+  <p><button ion-button  round style="font-size: 20px" outline>ให้ขันทึกข้อความเกี่ยวกับ ปัญหา/อุปสรรค/การนัดหมาย/เหตุผล ที่นับจดไม่ได้</button></p>
   <ion-item>
     <ion-input placeholder="ปัญหาและอุปสรรคที่พบ" style="background-color:whitesmoke;color: black"></ion-input>
   </ion-item>
-  <br>
+  <br><br>
   <ion-buttons text-center>
     <button ion-button large round (click)="submit()" >ถัดไป ></button>
   </ion-buttons>
