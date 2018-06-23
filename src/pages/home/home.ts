@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import {IonicPage, NavController, NavParams, MenuController,ModalController } from 'ionic-angular';
 import { SN1 } from '../sn1/sn1'
 
 /**
@@ -16,14 +16,17 @@ import { SN1 } from '../sn1/sn1'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public menu : MenuController,) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public menu : MenuController,public modal: ModalController) {
     menu.enable(true);
   }
+  
     
   generateSN1(){
     this.navCtrl.push(SN1);
   }
-
+  openModal(){
+    this.modal.create('ModalPage');
+    }
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
