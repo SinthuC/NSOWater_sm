@@ -28,23 +28,22 @@
   <ion-grid>
     <ion-row justify-content-center>
       <ion-col col-12>
-        <div style="padding:50" [ngSwitch]="sn1">
-            <ion-grid style="margin:20px">
+        <div style="padding:40" [ngSwitch]="sn1">
+            <ion-grid style="margin-left:20px">
           <ion-list *ngSwitchCase="'page1'">
             <sn1-sec1></sn1-sec1>
           </ion-list>
         </ion-grid>
-        <ion-grid style="margin:20px">
+        <ion-grid style="margin-left:15px">
           <ion-list *ngSwitchCase="'page2'">
             <sn1-sec2></sn1-sec2>
           </ion-list>
         </ion-grid>
-        <ion-grid style="margin:20px">
+        <ion-grid style="margin-left:20px">
           <ion-list *ngSwitchCase="'page3'">
             <sn1-sec3></sn1-sec3>
           </ion-list>
         </ion-grid>
-        
         </div>
       </ion-col>
     </ion-row>
@@ -61,7 +60,7 @@
           </button>
         </ion-col>
         <ion-col col-auto>
-          <button ion-button round large icon-start color="light">
+          <button ion-button round large icon-start color="light" (click)="openModal()">
             แผนที่
           </button>
         </ion-col>

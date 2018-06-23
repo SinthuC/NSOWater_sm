@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, Events} from 'ionic-angular';
+import { NavController, Events,ModalController} from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { Platform } from 'ionic-angular';
 
@@ -24,7 +24,7 @@ export class SN1 {
 
   musicAlertOpts: { title: string, subTitle: string };
 
-  constructor(public navCtrl: NavController, private events:Events) {
+  constructor(public navCtrl: NavController, private events:Events,private modal: ModalController) {
     this.stepCondition = true;
     this.isSec1Enable =  true
     this.isSec2Enable =  false
@@ -49,4 +49,9 @@ export class SN1 {
   stpSelect() {
     console.log('STP selected');
   }
+  openModal(){
+    const myModal = this.modal.create('ModalPage');
+  
+    myModal.present();
+    }
 }
