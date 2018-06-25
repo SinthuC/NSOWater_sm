@@ -54,4 +54,8 @@ export class SN1 {
   
     myModal.present();
     }
+  Convert(){
+    const convert = this.modal.create('ConvertModalPage');
+    convert.present();
+  }
 }
