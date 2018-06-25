@@ -15,6 +15,10 @@
 <ion-item style="margin-left:15px">
   <ion-input placeholder="เลขที่บ้าน/อาคาร" ></ion-input>
 </ion-item>
+<!-- <ion-content padding> -->
+  <button ion-button round outline style="font-size: 23px" (click)="loadMap">ตำแหน่งปัจจุบัน</button>
+  <p>latitude: {{lat}} longitude: {{lon}}</p>
+<!-- </ion-content> -->
 <p><button ion-button  round style="font-size: 20px" outline>ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง</button></p>
       <ion-item>         
           <ion-select [(ngModel)]="os1" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black;margin-left:15px" >
