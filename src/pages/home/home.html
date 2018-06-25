@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-menu [content]="content" side="right">
+<ion-menu [content]="content" type="overlay" side="right">
   <ion-header>
     <ion-toolbar>
       <ion-title>Menu</ion-title>
@@ -13,13 +13,13 @@
   <ion-content>
     <ion-list>
       <button ion-item (click)="openPage(homePage)">
-        Home
+        รับงาน
       </button>
       <button ion-item (click)="openPage(friendsPage)">
-        Friends
+        เลือก EA
       </button>
       <button ion-item (click)="openPage(eventsPage)">
-        Events
+        ส่งข้อมูล
       </button>
       <button ion-item (click)="closeMenu()">
         Close Menu
@@ -47,11 +47,19 @@
       <ion-grid style="padding:0.3px">
         <ion-row>
           <ion-col col-5>
-            <button ion-button color="secondary" block style="font-size:20px;height:85%;" (click)="generateSN1()">สำรวจหน่วยต่อไป</button>
+            <button 
+            ion-button color="secondary" 
+            block 
+            style="font-size:20px;height:85%;" 
+            (click)="generateSN1()">
+            <span style="margin-right:7px"><ion-icon name="add-circle">  </ion-icon></span>
+            <span>สำรวจหน่วยต่อไป</span>
+            
+            </button>
           </ion-col>
           <ion-col col-5>
-            <button ion-button color="danger" block style="font-size:20px;height:85%">
-              <ion-select [(ngModel)]="gender" interface="popover">
+            <button ion-button color="danger" block style="font-size:18px;height:85%">
+              <ion-select [(ngModel)]="gender" interface="popover" class="full-width-select">
                 <ion-option value="all" selected>ข้อมูลทั้งหมด</ion-option>
                 <ion-option value="wait">รอส่ง</ion-option>
                 <ion-option value="pause">หยุดชั่วคราว</ion-option>
@@ -72,7 +80,7 @@
 <ion-content padding>
 
   <ion-grid style="text-align:center;">
-    <ion-row style="font-weight:bold;background-color:gainsboro;font-size:20px;">
+    <ion-row style="font-weight:bold;background-color:#f9fff5;font-size:20px;">
       <ion-col>
         ลำดับที่
       </ion-col>
@@ -126,7 +134,7 @@
     <ion-grid>
       <ion-row>
         <ion-col col-4>
-          <button ion-button round color="danger" block style="font-size:20px;height:85%">
+          <button ion-button round color="danger" block style="font-size:20px;height:100%;margin :0px">
             <ion-select [(ngModel)]="buildingStatus" interface="popover" class="full-width-select">
               <ion-option value="building" selected>สถานะข้อมูลอาคาร</ion-option>
               <ion-option value="FSEdit">FS ให้แก้ไข</ion-option>
@@ -135,23 +143,26 @@
             </ion-select>
           </button>
         </ion-col>
-        <ion-col col-2>
+        <ion-col col-1>
 
         </ion-col>
         <ion-col col-2>
 
-          <button ion-button round color="secondary" block style="font-size:20px;" (click)="openModal()">
-            ดูแผนที่
+          <button ion-button round color="secondary" block style="font-size:16px;" (click)="openModal()">
+              <span style="margin-right:7px"><ion-icon name="map">  </ion-icon></span>
+              <span>ดูแผนที่</span>
           </button>
         </ion-col>
         <ion-col col-2>
-          <button ion-button round color="secondary" block style="font-size:20px;" (click)="generateSN1()">
-            อัพเดทข้อมูล
+          <button ion-button round color="secondary" block style="font-size:16px;" (click)="generateSN1()">
+              <span style="margin-right:7px"><ion-icon name="sync">  </ion-icon></span>
+              <span>อัพเดทข้อมูล</span>
           </button>
         </ion-col>
-        <ion-col col-2>
-          <button ion-button round color="highlight" block style="font-size:20px;" (click)="generateSN1()">
-            สำรวจครบทุกหน่วยใน EA
+        <ion-col col-3>
+          <button ion-button round color="highlight" block style="font-size:14px;" (click)="generateSN1()">
+              <span style="margin-right:7px"><ion-icon name="checkmark-circle-outline">  </ion-icon></span>
+              <span>สำรวจครบทุกหน่วยใน EA</span>
           </button>
         </ion-col>
       </ion-row>
