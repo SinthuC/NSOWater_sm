@@ -19,8 +19,6 @@ export class Sn1Sec1Component {
   wathId: any;
   message: any;
   constructor(private events: Events, public geo: Geolocation) {
-    console.log('Hello Sn1Sec1Component Component');
-    this.text = 'Hello World';
     this.message = "-";
     this.lon = "-";
     this.lat = "-";
@@ -36,10 +34,10 @@ export class Sn1Sec1Component {
     let geoOption = {enableHighAccuracy : true};
     try
     {
-      this.wathId = this.geo.watchPosition(geoOption).subscribe(data => 
+     this.geo.getCurrentPosition().then((resp) => 
       {
-        this.lat = data.coords.latitude;
-        this.lon = data.coords.longitude;
+        this.lat = resp.coords.latitude;
+        this.lon = resp.coords.longitude;
       },
       error =>
       {
