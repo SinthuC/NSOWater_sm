@@ -6,7 +6,7 @@ import { WizardAnimations } from './ion-simple-wizard-animations';
 @Component({
   selector: 'ion-simple-wizard',
   templateUrl: 'ion-simple-wizard.component.html',
-  animations: WizardAnimations.btnRotate
+  animations: WizardAnimations.btn_none
 })
 export class IonSimpleWizard {
   @Input() finishIcon = 'send';//Default

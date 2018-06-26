@@ -11,7 +11,7 @@ import { WizardAnimations } from './ion-simple-wizard-animations';
     template: `
     <ng-content style="text-align:center"></ng-content>
   `,
-    animations: WizardAnimations.zoom //TO DO: Change the animation by @Input for example
+    animations: WizardAnimations.none //TO DO: Change the animation by @Input for example
 })
 export class IonSimpleWizardStep {
     public isCurrent;
