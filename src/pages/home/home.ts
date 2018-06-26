@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {IonicPage, NavController, NavParams, MenuController,ModalController } from 'ionic-angular';
+import {IonicPage, NavController, NavParams, MenuController,ModalController,LoadingController } from 'ionic-angular';
 import { SN1 } from '../sn1/sn1'
 
 /**
@@ -16,7 +16,7 @@ import { SN1 } from '../sn1/sn1'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public menu : MenuController,private modal: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public menu : MenuController,private modal: ModalController,public loadingCtrl: LoadingController) {
     menu.enable(true);
   }
   
@@ -32,5 +32,11 @@ export class HomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
-
+  presentLoading() {
+    const loader = this.loadingCtrl.create({
+      content: "กรุณารอสักครู่....",
+      duration: 3000
+    });
+    loader.present();
+  }
 }
