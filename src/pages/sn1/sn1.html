@@ -27,23 +27,23 @@
 
   <ion-grid>
     <ion-row justify-content-center>
-      <ion-col col-12>
-        <div style="padding:40" [ngSwitch]="sn1">
-            <ion-grid style="margin-left:20px">
-          <ion-list *ngSwitchCase="'page1'">
-            <sn1-sec1></sn1-sec1>
-          </ion-list>
-        </ion-grid>
-        <ion-grid style="margin-left:15px">
-          <ion-list *ngSwitchCase="'page2'">
-            <sn1-sec2></sn1-sec2>
-          </ion-list>
-        </ion-grid>
-        <ion-grid style="margin-left:20px">
-          <ion-list *ngSwitchCase="'page3'">
-            <sn1-sec3></sn1-sec3>
-          </ion-list>
-        </ion-grid>
+      <ion-col col-11>
+        <div  [ngSwitch]="sn1">
+          
+            <ion-list *ngSwitchCase="'page1'">
+              <sn1-sec1></sn1-sec1>
+            </ion-list>
+         
+          
+            <ion-list *ngSwitchCase="'page2'">
+              <sn1-sec2></sn1-sec2>
+            </ion-list>
+          
+         
+            <ion-list *ngSwitchCase="'page3'">
+              <sn1-sec3></sn1-sec3>
+            </ion-list>
+         
         </div>
       </ion-col>
     </ion-row>
@@ -55,30 +55,30 @@
     <ion-grid>
       <ion-row no-padding no-margin>
         <ion-col col-3>
-          <button ion-button round  (click)="goHome()" icon-start >
+          <button ion-button round (click)="goHome()" icon-start>
             HOME
           </button>
         </ion-col>
         <ion-col col-1>
-           
-          </ion-col>
+
+        </ion-col>
         <ion-col col-auto>
-          <button ion-button round  icon-start color="secondary" (click)="openModal()">
+          <button ion-button round icon-start color="secondary" (click)="openModal()">
             แผนที่
           </button>
         </ion-col>
         <ion-col col-auto>
-          <button ion-button round  icon-start color="secondary" (click)="Convert()">
+          <button ion-button round icon-start color="secondary" (click)="Convert()">
             มาตรา
           </button>
         </ion-col>
         <ion-col col-auto>
-          <button ion-button round  icon-start color="danger">
+          <button ion-button round icon-start color="danger">
             หยุดชั่วคราว
           </button>
         </ion-col>
         <ion-col col-auto>
-          <button ion-button round  icon-start color="secondary">
+          <button ion-button round icon-start color="secondary">
             บันทึก1
           </button>
         </ion-col>
