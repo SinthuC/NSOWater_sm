@@ -1,12 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 /*import { Keyboard } from '@ionic-native/keyboard';*/
-import { Events } from 'ionic-angular';
+import { Events, Content, AlertController } from 'ionic-angular';
 import { WizardAnimations } from './ion-simple-wizard-animations';
+
 
 @Component({
   selector: 'ion-simple-wizard',
   templateUrl: 'ion-simple-wizard.component.html',
-  animations: WizardAnimations.btn_none
+  animations: WizardAnimations.btnZoom
 })
 export class IonSimpleWizard {
   @Input() finishIcon = 'send';//Default
@@ -16,9 +17,11 @@ export class IonSimpleWizard {
   @Output() stepChange = new EventEmitter();
   public steps = 0;//Innitial
   public hideWizard = false;//Default
+  searchModel : any
   @Input() stepCondition = true;//Default
 
-  constructor(public evts: Events) {
+  constructor(public evts: Events,public content : Content,private alert: AlertController) {
+    this.searchModel = '44'
   }
 
   ngOnInit() {
@@ -64,6 +67,7 @@ export class IonSimpleWizard {
   back() {
     this.stepChange.emit(this.step - 1);
     this.evts.publish('step:back');
+    this.scrollToTop();
 
   }
   /**
@@ -72,6 +76,39 @@ export class IonSimpleWizard {
   next() {
     this.stepChange.emit(this.step + 1);
     this.evts.publish('step:next');
+    this.scrollToTop();
   }
 
+  scrollToTop(){
+    this.content.scrollToTop();
+  }
+
+  presentAlert() {
+    let alert = this.alert.create({
+      title: 'คุณกรอกข้อมูลไม่ถูกต้อง',
+      subTitle: 'กรุณาระบุตัวเลขของครัวเรือนให้ถูกต้อง',
+      buttons: ['Dismiss']
+    });
+    alert.present();
+  }
+
+  searchValidate(ev: any){
+    const val = parseInt(ev.target.value);
+    if(isNaN(val)){
+      return null;
+    }
+
+    if(val < 1 || val > this.steps){
+      this.searchModel='';
+      this.presentAlert();
+      return null;
+    }else{
+    this.stepChange.emit(val);
+    this.evts.publish('step:next');
+    this.scrollToTop();
+    }
+    //return val;
+  }
+
+  
 }
