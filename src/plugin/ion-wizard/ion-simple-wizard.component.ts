@@ -21,7 +21,7 @@ export class IonSimpleWizard {
   @Input() stepCondition = true;//Default
 
   constructor(public evts: Events,public content : Content,private alert: AlertController) {
-    this.searchModel = '44'
+    this.searchModel = ''
   }
 
   ngOnInit() {
@@ -87,7 +87,7 @@ export class IonSimpleWizard {
     let alert = this.alert.create({
       title: 'คุณกรอกข้อมูลไม่ถูกต้อง',
       subTitle: 'กรุณาระบุตัวเลขของครัวเรือนให้ถูกต้อง',
-      buttons: ['Dismiss']
+      buttons: ['ปิด']
     });
     alert.present();
   }
